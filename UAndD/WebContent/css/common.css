@@ -1,0 +1,80 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 헤더용 */
+@font-face {
+    font-family: 'EliceDigitalBaeum_Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_220508@1.0/EliceDigitalBaeum_Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* 중간용 */
+@font-face {
+    font-family: 'SOYOMapleBoldTTF';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2310@1.0/SOYOMapleBoldTTF.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* 중간용 로그인폼 */
+@font-face {
+    font-family: 'Cafe24SsurroundAir';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24SsurroundAir.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 기본용 */
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+#st1, #st2{
+	font-family: 'GmarketSansMedium';
+	font-size: 30px;
+}
+
+#st3, #st4{
+	font-family: 'GmarketSansMedium';
+	font-size: 30px;
+}
+
+.ul1{
+	font-family: 'GmarketSansMedium';
+}
+
+.grn{
+	font-family: 'GmarketSansMedium';
+	
+}
+
+/* 위로 가기 버튼 화면 고정 */
+.moveTopBtn {
+  position: fixed;
+  bottom: 1rem;
+  margin:0 50px 20px 0;
+  right: 1rem;
+  width: 4rem;
+  height: 4rem;
+  cursor: pointer;
+}
+
+.moveTopBtn img {
+	width: 50px;
+	height: 50px;
+}

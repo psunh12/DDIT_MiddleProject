@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="restaurantVo">
+
+	<select id="getRestaurantInfo" parameterType="int" resultType="restaurantVo">
+		SELECT * FROM restaurant WHERE rest_no = #{rest_no}
+	</select>
+	
+	<select id="selectRestaurant" resultType="restaurantVo">
+  		select * from restaurant
+	</select>
+  
+	<select id="selectByDong" resultType="restaurantVo" parameterType="string">
+  		select * from restaurant where rest_addr like '%'||#{sword}||'%'
+	</select> 
+ 
+	<select id="selectByName" resultType="restaurantVo" parameterType="string">
+		select * from restaurant where rest_name like '%'||#{sword}||'%'
+	</select> 
+  
+  
+	
+</mapper>

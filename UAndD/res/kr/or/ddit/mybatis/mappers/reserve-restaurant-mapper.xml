@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	
+<mapper namespace="restRsvVo">
+
+	<insert id="reserveRestaurant" parameterType="restRsvVo">
+		INSERT INTO restaurant_reserve
+			(rest_rsv_no, rest_rsv_date, rest_rsv_time, 
+			rest_rsv_count, rest_rsv_state, mem_id, rest_no)
+		VALUES
+			(restautant_reserve_seq.nextval, #{rest_rsv_date}, #{rest_rsv_time},
+			#{rest_rsv_count}, 1, #{mem_id}, #{rest_no})
+	</insert>
+	
+	<select id="getReservedTime" parameterType="HashMap" resultType="String">
+		SELECT rest_rsv_time FROM restaurant_reserve
+		WHERE rest_no = #{rest_no} 
+			AND rest_rsv_date = #{selectedDate}
+			AND rest_rsv_state = 1
+	</select>
+	
+	<select id="getMemberRestaurantReserve" parameterType="string" resultType="map">
+		SELECT * FROM restaurant_reserve rr, restaurant r
+		WHERE r.rest_no = rr.rest_no 
+			AND rr.mem_id = #{mem_id}	
+			AND rr.rest_rsv_state = 1
+        ORDER BY rr.rest_rsv_date ASC
+	</select>
+	
+	<update id="reserveRestaurantCancel" parameterType="int">
+		UPDATE restaurant_reserve SET rest_rsv_state = '0'
+		WHERE rest_rsv_no = #{rest_rsv_no}
+	</update>
+	
+	<select id="getMemberRestaurantReserveCancel" parameterType="string" resultType="map">
+        SELECT *
+    		FROM (
+        		SELECT *
+            	FROM restaurant_reserve rr
+            	JOIN restaurant r ON r.rest_no = rr.rest_no
+            	WHERE rr.mem_id = #{mem_id} AND rr.rest_rsv_state = 0
+            	ORDER BY rr.rest_rsv_date DESC
+        	) res
+        	<![CDATA[
+			WHERE ROWNUM <= 5
+			]]>
+	</select>
+	
+	<update id="changeDayReserveState">
+		UPDATE restaurant_reserve SET rest_rsv_state = 0
+		<![CDATA[
+			WHERE rest_rsv_date < TO_CHAR(SYSDATE, 'yyyy-MM-dd')
+		]]>
+	</update>
+	
+</mapper>

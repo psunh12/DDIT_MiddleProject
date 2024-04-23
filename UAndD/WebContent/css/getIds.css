@@ -1,0 +1,63 @@
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cafe24SsurroundAir';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24SsurroundAir.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.container{
+  margin-top: -110px; /* body의 기본 마진을 제거하여 레이아웃에 영향을 주지 않도록 함 */
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center; /* 모든 내용을 수평 가운데 정렬 */
+}
+
+
+
+h1{
+  font-family: 'Cafe24SsurroundAir';
+  font-weight: bold;
+  color:#0080ff;
+  transition: all 0.6s ease-in-out;
+  margin: 0;
+}
+
+h2 {
+  font-family: 'GmarketSansMedium';
+  font-weight: lighter;
+  transition: all 0.6s ease-in-out;
+  margin: 0;
+}
+
+input {
+  background-color: #eee;
+  border: none;
+  padding: 12px 15px;
+  margin: 8px 0;
+  width: 100%;
+  font-family: 'GmarketSansMedium';
+}
+
+button {
+  font-family: 'Cafe24SsurroundAir';
+  border-radius: 20px;
+  border: 1px solid #0080ff;
+  background-color: #0080ff;
+  color: #FFFFFF;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 12px 45px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: transform 80ms ease-in;
+>>>>>>> branch 'master' of https://github.com/DayGong/DDIT_MiddleProject
+}

@@ -1,0 +1,77 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+.container-bottom{
+	font-family: 'GmarketSansMedium';
+	margin: 0 290px 0 290px;
+}
+
+.ftTop {
+	display: flex;
+	flex-direction: row;
+	background-color: #1a75ed;
+	height: 50px;
+	width : 100%;
+}
+
+#djList {
+	line-height: 50px;
+}
+
+#djList a {
+	text-decoration: none;
+	color: white;
+	margin-left: 50px;
+}
+
+.ftTop > #siteList {
+	margin-left: auto;
+	text-align: right;
+}
+
+#siteList {
+	line-height: 50px;
+}
+
+#siteList a {
+	text-decoration: none;
+}
+
+#siteList img {
+	width: 30px;
+	height: 30px;
+	margin-right: 10px;
+}
+
+.ftMid {
+	display: flex;
+	height: 70px;
+	border-width: 0px 0px 1px 0px;
+	border-style: solid;
+	border-color: lightgray;
+}
+
+#tourCall {
+	line-height: 70px;
+}
+
+#tourCall > span {
+	color: gray;
+}
+
+.ftMid > #callCenter {
+	margin-left: auto;
+	line-height: 70px;
+}
+
+.ftBttm {
+	text-align: center;
+	color: gray;
+	height: 70px;
+	line-height: 70px;
+}

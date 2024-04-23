@@ -1,0 +1,191 @@
+@charset "UTF-8";
+/*기본용*/
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*헤더용*/
+@font-face {
+    font-family: 'EliceDigitalBaeum_Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_220508@1.0/EliceDigitalBaeum_Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/*중간용*/
+@font-face {
+    font-family: 'Cafe24SsurroundAir';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24SsurroundAir.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+	display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+	font-family: 'GmarketSansMedium';
+}
+ 
+input{
+	display:flex;
+	width: 190px;
+	height: 40px;
+	padding-left: 10px;
+}
+
+select{
+	border:1px solid #c9c9c9;
+	border-radius: 5px;
+	width: 150px;
+	height: 40px;
+	padding-left: 5px;
+	font-family: 'GmarketSansMedium', sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 800px; /* 필요에 따라 최대 너비 조정 */
+    margin-top: 30px; /* 로고와 컨테이너 사이 여백 조정 */
+    padding: 20px;
+    background: #ffffff;
+    border: 1px solid #c9c9c9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header{
+   font-size: 30px;
+   color:#3a89fc;
+   line-height: 1.5;
+   font-family: 'Cafe24SsurroundAir';
+   margin-bottom: 20px;
+   margin-left:-5px;
+   text-align: center;
+}
+
+.id-check{
+	display:inline-block;
+	text-align:center;
+}
+.form-control{
+	border:1px solid #c9c9c9;
+	border-radius: 5px;
+	width: 160px;
+	height: 35px;	
+}
+.form-group input {
+	width: 280px;
+	border-bottom: 1px solid #cfcfcf;
+}
+.form-group {
+	line-height: 2;
+}
+#domain-text {
+  width: 130px;
+  padding-left: 10px;
+}
+.postnum{
+  width: 150px;
+  height: 30px;	
+}
+.form-group #add1,
+.form-group #add2 {
+	height: 35px;
+	width: 300px;
+}
+
+.ziptr:hover {
+	background: pink;
+}
+
+.email-input-group{
+	display:flex;
+	flex-direction:row;
+}
+
+#checkid{
+	width: 120px;
+	height: 40px;
+	text-align: center;
+}
+
+.btn {
+	font-family: 'GmarketSansMedium';
+	font-weight: normal;
+    border-radius: 10px;
+    border: 1px solid #0080ff;
+    background-color: #0080ff;
+    color: #FFFFFF;
+    font-size: 15px;
+    padding: 12px 45px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+    display: inline-block;
+    margin-right: 10px;
+    /* 아래 두 속성 추가 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+
+.btn:active {
+  transform: scale(0.95);
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn.ghost {
+  background-color: transparent;
+  border-color: #FFFFFF;
+  font-family: 'Cafe24SsurroundAir';  
+}
+#chk{
+	width:100px;
+}
+.form-group td input[type="button"]{
+   width: 130px;
+   padding: 12px 45px;
+   margin-left: 3px;
+   
+}
+#detailAddress{
+	width:580px;
+	height:35px;
+	margin-left: 3px;
+}
+#updatebtn{
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    width:180px;
+	height:50px;
+	background-color: #0080ff;
+	border: 1px solid #0080ff;
+	font-size: 18px;
+    
+}
+#reset{
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    width:180px;
+	height:50px;
+	background-color: red;
+	border: 1px solid red;
+	font-size: 18px;
+	
+}
+::placeholder {
+    font-family: 'GmarketSansMedium', sans-serif;
+}

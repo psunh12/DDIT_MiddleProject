@@ -1,0 +1,76 @@
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cafe24SsurroundAir';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24SsurroundAir.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  margin-top: -30px;
+  /* 배경이미지 */
+  background: url("../images/login/꿈돌3.png") fixed right 500px center / 300px 300px no-repeat, 
+  			  url("../images/login/꿈돌3-1.png") fixed left 500px center / 300px 300px no-repeat
+}
+
+
+
+h1 {
+  font-weight: bold;
+  margin: 0;
+  font-family: 'Cafe24SsurroundAir';
+  color : #0080ff;
+  
+}
+
+
+
+button {
+  font-family: 'Cafe24SsurroundAir';
+  border-radius: 20px;
+  border: 1px solid #0080ff;
+  background-color: #0080ff;
+  color: #FFFFFF;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 12px 45px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: transform 80ms ease-in;
+}
+
+
+
+form {
+  background-color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 50px;
+  height: 100%;
+  text-align: center;
+}
+
+.form-input{
+  font-family: 'GmarketSansMedium';
+    background-color: #eee;
+  border: none;
+  padding: 12px 15px;
+  margin: 8px 0;
+  width: 100%;
+}
+
+
+

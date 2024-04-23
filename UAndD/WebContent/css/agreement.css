@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+textarea {
+  height: 250px;
+  width: 450px;
+  padding: 10px;
+  box-sizing: border-box;
+  border: solid 2px #1E90FF;
+  border-radius: 5px;
+  font-size: 14px; /* 글씨 크기를 줄임 */
+  font-family: 'GmarketSansMedium'
+}

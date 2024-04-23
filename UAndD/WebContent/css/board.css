@@ -1,0 +1,78 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cafe24SsurroundAir';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24SsurroundAir.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+	
+	
+
+	.action{
+		background-color: #0080ff;
+		color: white;	
+		border: none;
+		font-family: 'GmarketSansMedium';
+		width: calc(48%);	
+		padding: 5px;
+		border-radius: 4px;
+		font-size: 15px;
+		font-weight: lighter;
+	}
+	#replyInsert{
+	  margin-bottom: 10px;
+	}
+	
+	
+	.modal-dialog {
+		padding: 20px;
+		max-width: 400px;
+		height:600px;
+		font-family: 'GmarketSansMedium';
+	}
+
+
+	.modal-body input[type="text"],
+	.modal-body input[type="file"],
+	.modal-body input[type="button"] {
+		width: calc(100% - 10px);
+		margin-bottom: 5px;
+		padding: 8px;
+		border-radius: 4px;
+		border: 1px solid #ccc;
+		font-family: 'GmarketSansMedium';
+	}
+
+	.modal-footer {
+		text-align: right;
+	}
+	.modal input[type="button"]
+	{
+		background-color: #0080ff;
+ 		color: white;	
+ 		
+	}
+
+#retext,#replyInsert {
+    display: inline-block;
+    font-size: 16px;
+    vertical-align: middle; /* 요소들의 수직 정렬을 위해 사용할 수 있습니다. */
+    /* 그 외에 필요한 스타일을 추가할 수 있습니다. */
+}
+
+	#retext{	
+		border: 1px solid #ccc;
+		border-radius: 5px;
+		resize:none;
+	}

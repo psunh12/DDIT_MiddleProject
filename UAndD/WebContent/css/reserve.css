@@ -1,0 +1,268 @@
+@charset "UTF-8";
+
+
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cafe24SsurroundAir';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24SsurroundAir.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+#rest-left-modal-body{
+	margin-left: 25px;
+}
+.modal-body div{
+	font-family: 'GmarketSansMedium';
+}
+
+.modal2, .modalh1{
+	font-family: 'Cafe24SsurroundAir';
+	font-size: 25px;
+	font-weight: bold;
+	
+}
+.modal3, .modalh2{
+	font-family: 'Cafe24SsurroundAir';
+	font-size: 20px;
+	font-weight: bold;
+	line-height: 2; 
+}
+
+#modal4{
+	 margin: -30px 0 0 100px;
+	 
+	 
+}
+.form-label{
+	font-family: 'Cafe24SsurroundAir';
+	font-size: 20px;
+	font-weight: bold;
+	line-height: 0.5; 
+}
+
+#restaurant_rsv_btn{
+	margin-left: 330px;
+	border-radius: 10px;
+	border: 1px solid #1a75ed;
+	background-color: #1a75ed;
+	color: #FFFFFF;
+	font-family: 'GmarketSansMedium';
+	font-size: 15px;
+	padding: 12px 45px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
+}
+
+/* 모달창 하단 close버튼 스타일 노란색으로 변경  */
+.modal-footer button {
+	background: #1a75ed;
+	border: 1px solid #1a75ed;
+	color: white;		
+}
+
+#left-modal-body{
+	margin-left: 25px;
+}
+
+/* 모달창 중간 부분 폼과 상세정보가 양옆으로 나오도록 구역 설정*/
+.modal-body {
+	display: flex;
+}
+
+/* 모달 배경색 설정 */
+.modal-header, .modal-body, .modal-footer {
+	background-color:	#f9f8f4;	
+}
+
+#left-modal-body, #right-modal-body {
+	flex-direction: row;
+	width:50%;
+	height:100%;
+}
+
+.backImgDiv {
+	margin-left: 20px;
+	height: 500px;
+	background-size: cover;
+}
+
+
+#img1{
+	width: 450px; 
+	height: 450px; 
+	border-radius: 10%; 
+	margin-left: 60px;
+}
+
+#img2{
+	width: 450px; 
+	height: 450px; 
+	border-radius: 10%; 
+	margin-left: -150px;
+}
+
+#kakao{
+	margin: 0 0 0 250px;
+}
+.infoDiv{
+	margin: -30px 0 0 -110px;
+}
+
+/* number 옆에 항상 화살표 보이게 설정 */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+	-webkit-appearance: inner-spin-button;
+    opacity: 1;
+}
+
+#rsv_count, #rest_rsv_count {
+	width: 150px;
+	height: 30px;
+	font-size: 15px;
+	border-style: solid;
+	border-radius: 15px;
+	padding-left: 10px;
+	border-color: lightgray;
+	outline: none;
+}
+
+#rsv_count:focus {
+	border-color: #feeb48;
+	outline: none;
+}
+
+/* 카카오 페이 버튼에 마우스 커서를 손가락 모양으로 변경 */
+#payBtn {
+	cursor: pointer;
+}
+
+/* 잔여 객실을 표시할 위치 설정 */
+.empty_room{
+	margin-left: 50%;
+}
+
+/* 객실 선택 라디오 버튼 설정 시작 */
+.form_radio_btn {
+	width: 47%;
+	height : 45px;
+    border: 1px solid #EAE7E7;
+    border-radius: 10px;
+}
+
+.form_radio_btn input[type=radio] {
+	display: none;
+}
+
+.form_radio_btn label {
+	display: block;
+	border-radius: 10px;
+	margin: 0 auto;
+    text-align: center;
+    height: -webkit-fill-available;
+    line-height: 45px;
+}
+
+.form_radio_btn input[type=radio]:checked + label {
+	background: #1a75ed;
+	color: #fff;
+}
+
+
+
+/* Hover 설정 */
+.form_radio_btn label:hover {
+	color: #666;
+}
+
+/* disabled 설정 */
+.form_radio_btn input[type=radio] + label {
+	background: #F9FAFC;
+	color: #666;
+}
+/* 객실 선택 라디오 버튼 설정 끝 */
+
+/* 예약 테이블 css */
+table.reserveTable {
+	width: 100%;
+	border-collapse: collapse;
+	text-align: left;
+	line-height: 1.5;
+}
+
+table.reserveTable thead th {
+	font-family: 'Cafe24SsurroundAir';
+	padding: 10px;
+	font-weight: bold;
+	vertical-align: top;
+	color: #1a75ed;
+	border-bottom: 3px solid #1a75ed;
+}
+
+table.reserveTable tbody th {
+	font-family: 'GmarketSansMedium';
+	width: 150px;
+	padding: 10px;
+	font-weight: bold;
+	vertical-align: top;
+	border-bottom: 1px solid #ccc;
+	background: #f3f6f7;
+}
+
+table.reserveTable td {
+	font-family: 'GmarketSansMedium';
+	width: 350px;
+	padding: 10px;
+	vertical-align: top;
+	border-bottom: 1px solid #ccc;
+}
+
+.spaceDiv {
+	margin-top: 100px;
+}
+
+.dateDiv input[type=date] {
+	border-radius: 30px;
+	border: 2px solid lightgray;
+}
+
+.dateDiv input[type=date]:focus {
+	border: 2px solid lightgray;
+}
+
+#addMemberHotelReserve input[type=button],
+#addMemberRestaurantReserve input[type=button]
+{
+	font-family: 'GmarketSansMedium'; 
+	border-radius: 10px;
+	border: 1px solid #0080ff;
+	background-color: #0080ff;
+	color: #FFFFFF;
+	font-size: 10px;
+	font-weight: normal;
+	padding: 5px 10px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
+}
+
+#addMemberHotelReserveCancel input[type=button],
+#addMemberRestaurantReserveCancel input[type=button] {
+	font-family: 'GmarketSansMedium'; 
+	border-radius: 10px;
+	border: 1px solid gray;
+	background-color: gray;
+	color: #FFFFFF;
+	font-size: 10px;
+	font-weight: normal;
+	padding: 5px 10px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
+}

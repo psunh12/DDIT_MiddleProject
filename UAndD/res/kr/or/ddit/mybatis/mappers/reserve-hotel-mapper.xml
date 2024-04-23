@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	
+<mapper namespace="hotelRsvVo">
+
+	<insert id="reserveHotel" parameterType="hotelRsvVo">
+		INSERT INTO hotel_reserve (
+						hotel_rsv_no, hotel_rsv_startdate, hotel_rsv_enddate, 
+						hotel_rsv_count, hotel_rsv_room, hotel_rsv_state, 
+						mem_id, hotel_no, hotel_totalamt)
+		VALUES (
+						#{hotel_rsv_no}, #{hotel_rsv_startdate}, #{hotel_rsv_enddate}, 
+						#{hotel_rsv_count}, #{hotel_rsv_room}, #{hotel_rsv_state}, 
+						#{mem_id}, #{hotel_no}, #{hotel_totalamt})
+	</insert>
+	
+	<select id="getMemberHotelReserve" parameterType="string" resultType="map">
+		SELECT * FROM hotel_reserve hr, hotel h
+		WHERE h.hotel_no = hr.hotel_no 
+			AND hr.mem_id = #{mem_id}
+			AND hr.hotel_rsv_state = 1
+		ORDER BY hr.hotel_rsv_startdate ASC
+	</select>
+	
+	<update id="doManagerAllCheckout">
+		UPDATE hotel_reserve SET hotel_rsv_state = '0' 
+		WHERE hotel_rsv_enddate = TO_CHAR(SYSDATE, 'yyyy-MM-dd')
+	</update>
+	
+	<update id="reserveHotelCancel" parameterType="string">
+		UPDATE hotel_reserve SET hotel_rsv_state = '0'
+		WHERE hotel_rsv_no = #{hotel_rsv_no}
+	</update>
+	
+	<select id="getMemberHotelReserveCancel" parameterType="string" resultType="map">
+		SELECT *
+    		FROM (
+        		SELECT *
+           			FROM hotel_reserve hr
+            		JOIN hotel h ON h.hotel_no = hr.hotel_no
+            		WHERE hr.mem_id = #{mem_id} AND hr.hotel_rsv_state = 0
+            		ORDER BY hr.hotel_rsv_startdate DESC
+        	) res
+        	<![CDATA[
+			WHERE ROWNUM <= 5
+			]]>
+	</select>
+	
+</mapper>

@@ -1,0 +1,156 @@
+@charset "UTF-8";
+
+/*기본용*/
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*헤더용*/
+@font-face {
+    font-family: 'EliceDigitalBaeum_Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_220508@1.0/EliceDigitalBaeum_Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/*중간용*/
+@font-face {
+    font-family: 'Cafe24SsurroundAir';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24SsurroundAir.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+.container {
+    display: flex;
+    max-width: 1300px;
+    height:900px;
+    margin: 100px 200px; auto;
+    padding: 20px;
+    background-color: #fff;
+/* 	border: 1px solid #ccc; */
+    border-radius: 10px;
+    
+}
+
+#left {
+    width:400px;
+    height:700px;
+    padding: 20px;
+    text-align: center;
+    justify-content : center;
+}
+
+#right {
+    width:1000px;
+    padding: 20px;
+    float:right;
+}
+
+h2.categoryTitle{
+	margin: 20px;	
+}
+
+h1.mypage {
+    font-family: 'Cafe24SsurroundAir';
+    font-weight: bold;
+    font-size: 60px;
+    text-align: center;
+    box-shadow: inset 0px -15px 0px 0px #fbc680;/* spread 값을 음수로 설정하여 좌우 길이를 짧게 조절 */
+    margin: 0 700px;
+    line-height: 90px;
+}
+h2{
+	font-family: 'Cafe24SsurroundAir';	
+}
+iframe{
+	width: 800px;
+	height: 1000px;
+	
+}
+
+.cate p{
+	text-align: center;
+}
+
+.admin-details p{
+	font-family: 'GmarketSansMedium';
+	font-size: 20px;
+	text-align: center;
+}
+.category-container{
+	margin-top:-50px;
+}
+
+#doAllCheckout {
+    margin:30px 0 0 10px;
+	font-family: 'GmarketSansMedium'; 
+	border-radius: 10px;
+	border: 1px solid #0080ff;
+	background-color: #0080ff;
+	color: #FFFFFF;
+	font-size: 20px;
+	font-weight: normal;
+	padding: 12px 65px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
+}
+
+.maincolumn {
+    margin-top: 20px;
+}
+.admin-info div h2{
+	margin:10px;
+}
+
+#admin-info-link a {
+    font-family: 'GmarketSansMedium';
+    font-weight: normal;
+    font-size: 20px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* 수정: 수직 가운데 정렬 */
+    flex-direction: column;
+    margin: 10px;
+    line-height: 2.5;
+}
+
+#admin-info-link #item{
+	display: flex;
+	height:20px;
+	weight:40px;	
+}
+
+
+.categoryTitle {
+	margin:20px;
+}
+.exclude-css {
+    all: initial !important;
+}
+.container div {
+    padding: 10px; /* 선택적인 여백 추가 */
+    margin-bottom: 10px; /* 선택적인 하단 여백 추가 */
+}
+.image-wrapper {
+    width: 250px; /* 이미지 너비에 맞게 조절 */
+    height: 250px; /* 이미지 높이에 맞게 조절 */
+    border-radius: 50%; /* 원 형태로 이미지 모서리를 만듭니다. */
+    overflow: hidden; /* 이미지를 감싸는 부분을 벗어나는 부분을 숨깁니다. */
+    align-content: center;
+    background: #e3dbff;
+    justify-content: center;
+    margin-left: 40px;
+}
+
+.round-image {
+    width: 100%; /* 부모 요소인 .image-wrapper에 맞게 이미지 크기 조절 */
+    height: auto; /* 비율 유지 */
+    display: block; /* 인라인 요소를 블록 요소로 변환하여 width와 height를 사용할 수 있게 합니다. */
+}
